@@ -2,7 +2,8 @@ module PrawnSpread
   
   module ActionController
 
-    def prawn_spread(options)
+    def prawn_spread(options, &block)
+      @prawn_spread_completion_block = block
       prawn_spread_options.merge! options
     end
     

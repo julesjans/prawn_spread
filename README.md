@@ -46,6 +46,12 @@ Additionally a PDF template can be set to be automatically repeated on every pag
 prawn_spread :prawn => {:template => "headed_paper.pdf", :repeat_template => true}, :filename => 'headed_report.pdf'
 ```
 
+An optional block can be passed to prawn_spread as a completion handler, it will be executed after the view has been rendered (PDF only at the moment):
+
+```ruby	
+prawn_spread(:filename => 'my_report.pdf', :inline => true) {File.delete(tmp_file)}
+```
+
 ---
 
 ###On the way...
@@ -53,3 +59,5 @@ prawn_spread :prawn => {:template => "headed_paper.pdf", :repeat_template => tru
 1. Tests, none as yet...
 
 2. Inline spreadsheets (obviously not inline)...?
+
+3. Completion handler for .xls
