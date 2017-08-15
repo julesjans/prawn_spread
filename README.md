@@ -5,7 +5,7 @@ For quickly integrating reports into rails views.
 Works in rails 2.3.x, 3.2.x & 4.0.
 
 
-###Installation
+### Installation
 
 This gem is not distributed built. Either clone & build, or use bundler:
 
@@ -13,7 +13,7 @@ This gem is not distributed built. Either clone & build, or use bundler:
 gem 'prawn_spread', :git => 'https://github.com/julesjans/prawn_spread.git'
 ```
 
-###Usage
+### Usage
 
 Create a view (either *.pdf.prawn* or *.xls.spreadsheet*), and code away with *[prawn](https://github.com/prawnpdf/prawn)* or *[spreadsheet](https://github.com/zdavatz/spreadsheet)*:
 
@@ -39,7 +39,7 @@ Also *[prawn](https://github.com/prawnpdf/prawn)* can be configured (*[spreadshe
 ```ruby	
 prawn_spread :prawn => {:top_margin => 20}, :filename => 'my_report.pdf'
 ```
-
+
 Additionally a PDF template can be set to be automatically repeated on every page (great for reports):
 
 ```ruby	
@@ -51,13 +51,3 @@ An optional block can be passed to prawn_spread as a completion handler, it will
 ```ruby	
 prawn_spread(:filename => 'my_report.pdf', :inline => true) {File.delete(tmp_file)}
 ```
-
----
-
-###On the way...
-
-1. Tests, none as yet...
-
-2. Inline spreadsheets (obviously not inline)...?
-
-3. Completion handler for .xls
